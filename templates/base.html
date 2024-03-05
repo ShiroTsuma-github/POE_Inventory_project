@@ -1,15 +1,1479 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/trade.css')}}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
     </style>
 </head>
+
 <body>
-    
+    <div class="top">
+        welp
+    </div>
+    <div class="content">
+<div class="search-bar">
+    <div class="search-left">
+        <div tabindex="0" class="multiselect search-select" style="width: 100%;">
+            <div class="multiselect__select"></div>
+            <div class="multiselect__tags">
+                <div class="multiselect__tags-wrap" style="display: none;"></div> <!---->
+                <div class="multiselect__spinner" style="display: none;"></div> <input name="" type="text"
+                    autocomplete="off" placeholder="Search Items..." class="multiselect__input"> <!---->
+            </div>
+            <div class="multiselect__content-wrapper" style="max-height: 300px; display: none;">
+                <ul class="multiselect__content" style="display: inline-block;"> <!---->
+                    <li class="multiselect__element"><!----> <span
+                            class="multiselect__option multiselect__option--disabled multiselect__option--highlight"><span>Accessories</span></span>
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahkeli's Meadow Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahkeli's Mountain Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahkeli's Valley Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Anathema Moonstone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Andvarius Gold Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Angler's Plait Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Araku Tiki Coral Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Arn's Anguish Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ikiaho's Promise Coral Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ascent From Flesh Chain Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ashes of the Stars Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Astral Projector Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Astramentis Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Foible Paua Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Aul's Uprising Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Auxium Chain Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Auxium Crystal Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Badge of the Brotherhood Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bated Breath Chain Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bear's Girdle Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Belt of the Deceiver Heavy
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Berek's Grip Two-Stone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Berek's Pass Two-Stone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Berek's Respite Two-Stone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bisco's Collar Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bisco's Leash Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blackflame Amethyst Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blackheart Iron Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blightwell Clutching Talisman</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bloodboil Coral Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bloodgrip Marble Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bloodgrip Coral Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blood of Corruption Amber
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bloodsoaked Medallion Amber
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bound Fate Cloth Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Brinerot Mark Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Call of the Brotherhood Two-Stone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Call of the Void Sapphire
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Carnage Heart Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ceinture of Benevolence Cloth
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chain of Endurance Chain Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chains of Emancipation Chain
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Choir of the Storm Lapis
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Circle of Anguish Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Circle of Fear Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Circle of Guilt Iron Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Circle of Nostalgia Amethyst
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Circle of Regret Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Coward's Chains Chain Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Coward's Legacy Chain Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crystallised Omniscience Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cyclopean Coil Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Daresso's Salute Citrine
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Darkness Enthroned Stygian
+                                Vise</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Death Rush Amethyst Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Defiance of Destiny Paua
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Bounty Golden Obi</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Eye Golden Hoop</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Presence Gold
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Damning Paua Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Tongue Lapis Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Invitation Heavy
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dream Fragments Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dyadian Dawn Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Emberwake Ruby Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Essence Worm Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eternal Damnation Agate
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Extractor Mentis Agate Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eye of Chayula Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eye of Innocence Citrine
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eyes of the Greatwolf Greatwolf
+                                Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Faminebind Rustic Sash</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fated End Paua Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Feastbind Rustic Sash</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fury Valve Turquoise Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Gifts from Above Diamond Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Gloomfang Blue Pearl Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Gluttony Leather Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Graven's Secret Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Hallowed Ground Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Headhunter Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Heartbound Loop Moonstone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Hinekora's Sight Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Honoured Alliance Coral Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Hyperboreus Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Hyrri's Truth Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Icefang Orbit Iron Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Immortal Flesh Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Impresence Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ixchel's Temptation Gold Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Kalandra's Touch Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Kaom's Binding Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Kaom's Sign Coral Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Kaom's Way Coral Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Karui Charge Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Karui Ward Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Kikazaru Topaz Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Leadership's Price Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Leash of Oblation Leather
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Le Heup of All Iron Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Lori's Lantern Prismatic Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mageblood Heavy Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Malachai's Artifice Unset
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Maligaro's Cruelty Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Maligaro's Restraint Chain
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mark of Submission Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mark of the Elder Steel Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mark of the Shaper Opal Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Marylene's Fallacy Lapis
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Meginord's Girdle Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ming's Heart Amethyst Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mokou's Embrace Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mother's Embrace Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Mutewind Seal Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Natural Hierarchy Rotfeather
+                                Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ngamahu's Sign Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ngamahu Tiki Coral Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Night's Hold Black Maw
+                                Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Nimis Topaz Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Olesya's Delight Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Original Sin Amethyst Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Perandus Blazon Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Perandus Signet Paua Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Perquil's Toe Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Perseverance Vanguard Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Polaric Devastation Opal Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Praxis Paua Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Precursor's Emblem Two-Stone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Precursor's Emblem Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Precursor's Emblem Sapphire
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Precursor's Emblem Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Precursor's Emblem Prismatic
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Presence of Chayula Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Prismweave Rustic Sash</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Profane Proxy Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Putembo's Meadow Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Putembo's Mountain Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Putembo's Valley Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Pyre Sapphire Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Pyroshock Clasp Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Rashkaldor's Patience Jade
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Redblade Band Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Atziri's Foible Paua
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Badge of the Brotherhood Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Bated Breath Chain
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Doedre's Damning Paua
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Dragonfang's Flight Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Emberwake Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Headhunter Leather
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Hinekora's Sight Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Hyrri's Truth Jade
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Karui Ward Jade
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Malachai's Artifice Unset
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Prismweave Rustic
+                                Sash</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Siegebreaker Heavy
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Soul Tether Cloth
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Tasalio's Sign Sapphire
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Voideye Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Replica Winterheart Gold
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Retaliation Charm Citrine
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Rigwald's Crest Two-Stone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Rigwald's Curse Wereclaw
+                                Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Romira's Banquet Diamond Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Rotblood Promise Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ryslatha's Coil Studded Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Sacrificial Heart Paua Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Shaper's Seed Agate Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Shavronne's Revelation Moonstone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Sibyl's Lament Coral Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Sidhebreath Paua Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Siegebreaker Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Snakepit Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Solstice Vigil Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Soulbound Paua Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Soul Tether Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Soulthirst Cloth Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Star of Wraeclast Ruby Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Stone of Lazhwar Lapis Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Stormfire Opal Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Storm Secret Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Stranglegasp Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">String of Servitude Heavy
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Sunblast Cloth Belt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Survivor's Guilt Heavy Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Tainted Pact Coral Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Talisman of the Victor Jet
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Tasalio's Sign Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Tavukai Coral Amulet</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Tawhanuku's Timing Moonstone
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Tear of Purity Lapis Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Anvil Amber Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Ascetic Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Aylardex Agate Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Burden of Truth Crystal
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Druggery Cloth Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Effigon Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Ephemeral Bond Lapis
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Eternal Struggle Onyx
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Felbog Fang Citrine
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Flow Untethered Cloth
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Halcyon Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Highwayman Gold Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Hungry Loop Unset Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Ignomon Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Jinxed Juju Citrine
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Magnate Studded Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Nomad Studded Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Pandemonius Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Pariah Unset Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Primordial Chain Coral
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Retch Rustic Sash</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Tactician Studded Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Taming Prismatic Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Torrent's Reclamation Cloth
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Untouched Soul Gold
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">The Warden's Brand Iron Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Thief's Torment Prismatic
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Timeclasp Moonstone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Timetwist Moonstone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Triumvirate Authority Unset
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Umbilicus Immortalis Leather
+                                Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ungil's Harmony Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Uul-Netol's Vow Unset Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Uzaza's Meadow Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Uzaza's Mountain Sapphire
+                                Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Uzaza's Valley Sapphire Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Valako's Sign Topaz Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Valyrium Moonstone Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Venopuncture Iron Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ventor's Gamble Gold Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Victario's Acuity Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Vivinsect Unset Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Voice of the Storm Lapis
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Voideye Unset Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Voidheart Iron Ring</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Voll's Devotion Agate Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Warped Timepiece Turquoise
+                                Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Warrior's Legacy Ruby Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Willowgift Jade Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Winterheart Gold Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Winterweave Coral Ring</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Wurm's Molt Leather Belt</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Xoph's Blood Amber Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Xoph's Heart Amber Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Yoke of Suffering Onyx Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Zerphi's Heart Paua Amulet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Blue Pearl Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Marble Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Seaglass Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Jet Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Paua Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Citrine Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Ruby Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Unset Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Coral Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Amber Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Jade Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Lapis Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Gold Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Onyx Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Turquoise Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Agate Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Astrolabe Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Simplex Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Focused Amulet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Black Maw Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Mandible Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Chrysalis Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Writhing Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Bonespire Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Ashscale Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Lone Antler Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Deep One Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Breakrib Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Deadhand Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Undying Flesh Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Rot Head Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Hexclaw Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Primal Skull Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Wereclaw Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Splitnewt Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Clutching Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Avian Twins Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Fangjaw Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Horned Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Spinefuse Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Three Rat Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Monkey Twins Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Longtooth Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Rotfeather Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Monkey Paw Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Three Hands Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Greatwolf Talisman</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Rustic Sash</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Chain Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Leather Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Heavy Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Cloth Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Studded Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Stygian Vise</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Vanguard Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Crystal Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Golden Obi</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Micro-Distillery Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Mechalarm Belt</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Breach Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Iron Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Amethyst Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Diamond Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Two-Stone Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Unset Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Bone Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Coral Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Paua Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Gold Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Topaz Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Sapphire Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Ruby Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Prismatic Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Moonstone Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Steel Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Opal Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Vermillion Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Cerulean Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Iolite Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Golden Hoop</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Cogwork Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Geodesic Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Composite Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Manifold Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Ratcheting Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Helical Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Dusk Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Penumbra Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Gloam Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Tenebrous Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Shadowed Ring</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="">Thief's Trinket</span></span> <!----></li>
+                    <li class="multiselect__element"><!----> <span
+                            class="multiselect__option multiselect__option--disabled"><span>Armour</span></span></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Abberath's Hooves Goathide
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Abhorrent Interrogation Ambush
+                                Mitts</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Abyssus Ezomyte Burgonet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Aegis Aurora Champion Kite
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahn's Contempt Praetor Crown</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahn's Heritage Colossal Tower
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ahuana's Bite Sharktooth Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Akoya's Gaze Regicide Mask</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Alberon's Warpath Soldier
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Algor Mortis Carnal Mitts</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Allelopathy Satin Gloves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Allelopathy Sorcerer Gloves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Alpha's Howl Sinner Tricorne</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ambu's Charge Crusader
+                                Chainmail</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ancient Skull Bone Helmet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Annihilation's Approach Dragonscale
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Apep's Slumber Vaal Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Apep's Slumber Ancient Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Apep's Supremacy Vaal Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Architect's Hand Strapped
+                                Mitts</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Architect's Hand Ambush Mitts</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Asenath's Chant Iron Circlet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Asenath's Gentle Touch Silk
+                                Gloves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Asenath's Mark Iron Circlet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ashrend Buckskin Tunic</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Asphyxia's Wrath Two-Point Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Asphyxia's Wrath Feathered Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Assailum Sinner Tricorne</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Acuity Vaal
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Mirror Golden
+                                Buckler</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Reflection Golden
+                                Buckler</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Splendour Sacrificial
+                                Garb</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Atziri's Step Slink Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Aukuna's Will Clasped Mitts</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Aurseize Steelscale Gauntlets</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Beacon of Madness Two-Toned
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Belly of the Beast Full
+                                Wyrmscale</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bitterbind Point Titanium Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blackgleam Cured Quiver</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blackgleam Fire Arrow Quiver</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blackgleam Blazing Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Black Sun Crest Lacquered
+                                Helmet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Black Zenith Fingerless Silk
+                                Gloves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blasphemer's Grasp Assassin's
+                                Mitts</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bloodbond Bone Armour</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blood Price Reaver Helmet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Blunderbore Astral Plate</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bones of Ullr Silk Slippers</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bramblejack Plate Vest</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Breathstealer Hydrascale
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Brinerot Flag Tarnished Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Brinerot Whalers Trapper
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Briskwrap Strapped Leather</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Briskwrap Sun Leather</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Broadstroke Heavy Quiver</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Broken Faith Archon Kite
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bronn's Lithe Cutthroat's
+                                Garb</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Bubonic Trail Murder Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cadigan's Crown Runic Crown</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Carcass Jack Varnished Coat</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ceaseless Feast Spiked Gloves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chains of Command Saintly
+                                Chainmail</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chalice of Horrors War
+                                Buckler</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chernobog's Pillar Ebony Tower
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cherrubim's Maleficence Triumphant
+                                Lamellar</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Chitus' Apex Necromancer
+                                Circlet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cloak of Defiance Lacquered
+                                Garb</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cloak of Flame Scholar's Robe</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cloak of Tawm'r Isley Savant's
+                                Robe</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Command of the Pit Riveted
+                                Gloves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Corpsewalker Carnal Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cospri's Will Assassin's Garb</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cowl of the Ceraunophile Solaris
+                                Circlet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cowl of the Cryophile Silken
+                                Hood</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cowl of the Thermophile Ezomyte
+                                Burgonet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Cragfall Serrated Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Craghead Serrated Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Craiceann's Carapace Golden
+                                Plate</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Craiceann's Chitin Magistrate
+                                Crown</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Craiceann's Pincers Titan
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Craiceann's Tracks Goliath
+                                Greaves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crest of Desire Fluted
+                                Bascinet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crest of Perandus Pine
+                                Buckler</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crown of Eyes Hubris Circlet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crown of the Inward Eye Prophet
+                                Crown</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crown of the Pale King Regicide
+                                Mask</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crown of the Tyrant Magistrate
+                                Crown</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crown of Thorns Vine Circlet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Crystal Vault Latticed
+                                Ringmail</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Curtain Call Plague Mask</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dance of the Offered Shackled
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dance of the Offered Carnal
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Daresso's Courage Baroque Round
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Daresso's Defiance Full
+                                Dragonscale</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Darkray Vectors Dragonscale
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dawnbreaker Colossal Tower
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dawnstrider Vaal Greaves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Death's Door Crusader Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Death's Oath Astral Plate</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Deerstalker Deerskin Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Deidbell Gilded Sallet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Deidbellow Gilded Sallet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Beacon Golden Flame</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Dominance Golden
+                                Mantle</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Immortality Golden
+                                Visage</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Stride Golden
+                                Caligae</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Touch Golden
+                                Bracers</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demigod's Triumph Golden
+                                Wreath</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Demon Stitcher Satin Gloves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dendrobate Sentinel Jacket</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Deshret's Vise Steel
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Devoto's Devotion Nightmare
+                                Bascinet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dialla's Malefaction Sage's
+                                Robe</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Malevolence Velvet
+                                Gloves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Scorn Lunaris
+                                Circlet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Skin Widowsilk Robe</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doedre's Tenure Velvet Gloves</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doppelgänger Guise Sadist
+                                Garb</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Delusion Slink
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Delusion Sorcerer
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Delusion Titan
+                                Greaves</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Fist Vaal Gauntlets</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Doryani's Prototype Saint's
+                                Hauberk</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Drillneck Penetrating Arrow
+                                Quiver</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Duskblight Leatherscale Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Duskblight Ironscale Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dusktoe Leatherscale Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Dusktoe Ironscale Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eber's Unification Hubris
+                                Circlet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Echoes of Creation Royal
+                                Burgonet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">El'Abin's Visage Fencer Helm</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Elevore Wolf Pelt</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Emperor's Vigilance Steel Kite
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Empire's Grasp Goliath
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Entropic Devastation Assassin's
+                                Mitts</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Esh's Mirror Thorium Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Esh's Mirror Vaal Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Esh's Visage Vaal Spirit
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Expedition's End Sentinel
+                                Jacket</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Eye of Malice Callous Mask</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ezomyte Hold Iron Hat</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Ezomyte Peak Iron Hat</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Facebreaker Strapped Mitts</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fairgraves' Tricorne Tricorne</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Faithguard Runic Helm</span></span> <!---->
+                    </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Farrul's Bite Harlequin Mask</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Farrul's Chase Slink Boots</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Farrul's Fur Triumphant
+                                Lamellar</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Farrul's Pounce Hydrascale
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fenumus' Shroud Widowsilk
+                                Robe</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fenumus' Spinnerets Assassin's
+                                Boots</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fenumus' Toxins Necromancer
+                                Circlet</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fenumus' Weave Carnal Mitts</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Flamesight Solaris Circlet</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Flesh and Spirit Ironscale
+                                Gauntlets</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fleshcrafter Necromancer
+                                Silks</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Font of Thunder Mirrored Spiked
+                                Shield</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Forbidden Shako Great Crown</span></span>
+                        <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span class="unique">Fox's Fortune Wild Leather</span></span>
+                        <!----></li>
+                    <li style="display: none;"><span class="multiselect__option"><span>No elements found. Consider
+                                changing the search query.</span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="search-right">
+        <div tabindex="0" class="multiselect status-select" style="width: 40%;">
+            <div class="multiselect__select"></div>
+            <div class="multiselect__tags">
+                <div class="multiselect__tags-wrap" style="display: none;"></div> <!---->
+                <div class="multiselect__spinner" style="display: none;"></div> <!----> <span
+                    class="multiselect__single">Affliction</span>
+            </div>
+            <div class="multiselect__content-wrapper" style="max-height: 300px; display: none;">
+                <ul class="multiselect__content" style="display: inline-block;"> <!---->
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option multiselect__option--highlight multiselect__option--selected"><span>Affliction</span></span>
+                        </li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Hardcore Affliction</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Ruthless Affliction</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>HC Ruthless Affliction</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Standard</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Hardcore</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Ruthless</span></span> <!----></li>
+                    <li class="multiselect__element"><span data-select="" data-selected="" data-deselect=""
+                            class="multiselect__option"><span>Hardcore Ruthless</span></span> <!----></li>
+                    <li style="display: none;"><span class="multiselect__option">No elements found. Consider changing
+                            the search query.</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </body>
+
 </html>

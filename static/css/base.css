@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Young+Serif&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -10,3 +10,16 @@ body{
     -o-background-size: cover;
     background-size: cover;
 }
+html {
+    font-family: "FontinSmallCaps";
+    color: #a38d6d;
+    line-height: 1.45;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+.top{
+    height: 197px;
+}
+/* .content{
+    background-color: blue;
+} */

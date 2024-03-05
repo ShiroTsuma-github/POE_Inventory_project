@@ -1,6 +1,5 @@
 from packages import app
-from flask import render_template, request, redirect, url_for
-from flask import g
+from flask import render_template
 import os
 app.config["DEBUG"] = True
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).replace("packages", "")
