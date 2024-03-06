@@ -5678,7 +5678,7 @@ h4 {
     left: 0;
     font-size: 13px;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: 0px -94px;
     min-width: 359px;
     height: 41px;
@@ -5762,14 +5762,14 @@ h4 {
     right: 135px;
     top: 0px;
     bottom: 0px;
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: 0px -47px;
     height: 45px;
     background-repeat: repeat-x
 }
 
 #statusBar .statusBarRight {
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: -222px -94px;
     width: 137px;
     height: 45px;
@@ -5779,7 +5779,7 @@ h4 {
 }
 
 #statusBar .pointsIcon {
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: 0px -141px;
     width: 16px;
     height: 16px;
@@ -5854,7 +5854,7 @@ h4 {
 .profile-link.challenges-completed.Ancestral::before {
     display: inline-block;
     content: " ";
-    background-image: url('/protected/image/gen/achievement-Ancestral.png?v=1707859052399&key=RooPOiSubFUz0dIjvUneGQ');
+    background-image: url('../images/achievement-Azmeri.png');
     vertical-align: middle;
     width: 22px;
     height: 21px;
@@ -6066,7 +6066,7 @@ h4 {
 .profile-link.challenges-completed.Azmeri::before {
     display: inline-block;
     content: " ";
-    background-image: url('/protected/image/gen/achievement-Azmeri.png?v=1707859052399&key=FyyLlb3qjKzYNT0sgJ55bw');
+    background-image: url('../images/achievement-Azmeri.png');
     vertical-align: middle;
     width: 22px;
     height: 21px;
@@ -7932,7 +7932,7 @@ small {
 .profile-link.challenges-completed.Azmeri::before {
     display: inline-block;
     content: " ";
-    background-image: url('/protected/image/gen/achievement-Azmeri.png?v=1707859052399&key=FyyLlb3qjKzYNT0sgJ55bw');
+    background-image: url('../images/achievement-Azmeri.png');
     vertical-align: middle;
     width: 22px;
     height: 21px;
@@ -11834,7 +11834,7 @@ html {
 #socialBar {
     top: 0px;
     right: 4px;
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: 0px 0px;
     width: 304px;
     height: 38px;
@@ -11868,7 +11868,7 @@ html {
 }
 
 .pointsIcon {
-    background: url('/protected/image/gen/ui-sprite.png?v=1707859051699&key=hcYqaIbeIeQAwESlJH12PQ') no-repeat;
+    background: url('../images/ui-sprite.png') no-repeat;
     background-position: 0px -141px;
     width: 16px;
     height: 16px;
@@ -16742,7 +16742,14 @@ fieldset[disabled] .multiselect {
 }
 
 .multiselect__element {
-    display: block
+    display: block;
+    cursor: pointer; /* Change cursor to pointer */
+    user-select: none; /* Prevent text selection */
+    font-size: 1rem;
+    padding: 5px;
+}
+.multiselect__element:hover {
+    background-color: #465260; /* Change background color on hover */
 }
 
 .multiselect__option {
