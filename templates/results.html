@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="results">
+    <div class="row row-total">
+        <h3 id="result-amount">Showing ? results</h3> 
+    </div>
+    <div class="resultset" id="query_results">
+        {% for result in results %}
+        <div class="row" style="display: none;"
+        result-user="{{ result['user'] }}" 
+        result-timestamp="{{ result['timestamp'] }}"
+        result-id="{{ result['id'] }}"
+        result-name="{{ result['item_name'] }}"
+        result-league="{{ result['league'] }}"
+        result-chaos_price="{{ prices[result['currency']] * result['price'] }}">
+            <div class="left">
+                <div class="newItemContainer itemRendered iW1 iH1">
+                    <div class="iconContainer">
+                        <div class="icon"><img
+                                src="{{ url_for('static', filename=result['item_image'])}}"
+                                alt="">
+                            <div class="sockets numSockets0"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="itemPopupContainer newItemPopup gemPopup">
+                    <img src="{{ url_for('static', filename=result['item_description'])}}" style="object-fit: contain;">
+                </div>
+            </div>
+            <div class="right">
+                <div class="details">
+                    <div class="price">
+                        <span data-field="price" class="s sorted sorted-asc"><span class="price-label fixed-price">Exact Price:</span><br>
+                            <span>{{ result['price'] }}</span><span>×</span><span class="currency-text currency-image"><img
+                                    src="{{ url_for('static', filename=result['currency_image']) }}" width="25px"
+                                    ><span>{{ result['currency'] }}</span></span></span></div>
+                                    {% if result['currency'] != 'Chaos Orb' %}
+                            <span data-field="price" class="s sorted sorted-asc"><span class="price-label fixed-price">↓</span><br>
+                            <span>{{ prices[result['currency']] * result['price'] }}</span><span>×</span><span class="currency-text currency-image"><img
+                                    src="{{ url_for('static', filename='images/orbs/orb_chaos.png')}}" width="25px"
+                                    ><span>Chaos Orb</span></span></span></div>
+                                    {% endif %}
+                    <div data-field="indexed" class="info">
+                        <center><small>added {{ result['timestamp'] }}</small></center>
+                        <span><button class="btn btn-default" style="width: 100%;color:rgb(226,226,226); border:1px solid rgb(138,86,9); background-color: rgb(90,56,6);">Remove Item</button></span>
+                    </div> 
+                </div>
+            </div>
+        
+        {% endfor %}
+        <!-- <div class="row controls"><button class="btn load-more-btn"><span>Load More</span></button></div> -->
+    </div>
+</div>
+{% endblock %}

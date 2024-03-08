@@ -2,8 +2,13 @@ from packages import app
 from flask import render_template
 import os
 from random import choice
+from datetime import datetime
+from flask_caching import Cache
 import json
+
+cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
 app.config["DEBUG"] = True
+cache.init_app(app)
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__)).replace("packages", "")
 
 
@@ -35,9 +40,11 @@ userData = [
 ]
 leagues = ['Hardcore Affliction', 'Ruthless Affliction', 'HC Ruthless Affliction',
            'Standard', 'Hardcore', 'Ruthless', 'Hardcore Ruthless']
-currencies = [['Awakened Sextant', 'images/sextant_awakened.png'], ['Ancient Orb', 'images/orb_ancient.png'],
-              ['Orb of Annulment', 'images/orb_annulment.png'], ['Orb of Binding', 'images/orb_binding.png'], ['Divine Orb', 'images/orb_divine.png'], ['Elevated Sextant', 'images/sextant_elevated.png']]
+currencies = [['Awakened Sextant', 'images/orbs/sextant_awakened.png'], ['Ancient Orb', 'images/orbs/orb_ancient.png'],
+              ['Orb of Annulment', 'images/orbs/orb_annulment.png'], ['Orb of Binding', 'images/orbs/orb_binding.png'], ['Divine Orb', 'images/orbs/orb_divine.png'], ['Elevated Sextant', 'images/orbs/sextant_elevated.png']]
 items = json.loads(open(ROOT_DIR + "data/items.json").read())
+database = json.loads(open(ROOT_DIR + "data/database.json").read())
+item_amount = len(database)
 prices = {
     'Chaos Orb': 1,
     'Ancient Orb': 5,
@@ -48,16 +55,22 @@ prices = {
     'Elevated Sextant': 200
 }
 iter_ = -1
+# now = datetime.now()
+# now.strftime("%y.%m.%d  %H:%M:%S")
 
 
 @app.route('/')
+@cache.cached(timeout=30)
 def index():
     global iter_
-    return render_template("base.html",
+    return render_template("results.html",
                            items=items,
                            userdata=userData[0],
                            leagues=leagues,
-                           currencies=currencies)
+                           currencies=currencies,
+                           item_amount=item_amount,
+                           results=database,
+                           prices=prices)
     iter_ += 1
     # return render_template("base.html",
     #                        items=items,

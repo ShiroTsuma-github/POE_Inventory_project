@@ -30,9 +30,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const clearButton = document.querySelector(".clear-btn");
 
+  const username = document.querySelector('#username');
+  const item_text = document.querySelector('#item-input');
+  const league_text = document.querySelector('#leagueText')
+  const price_min = document.querySelector('#min-price');
+  const price_max = document.querySelector('#max-price');
+  const currency = document.querySelector('#select-currency');
+  const search = document.querySelector('#search');
+  const query = {"username": username.innerText, "item": item_text.value, "league": league_text.innerText, "price_min": price_min.value, "price_max": price_max.value, "currency": currency.innerText.trim()};
+  const results_container = document.querySelector('#query_results');
+
 
   // Check if the input element and the content element are found
-  if (inputElement && name_search_element && elementsList && notFoundMessage && clearButton && selectedOption && dropdownContent) {
+  if (inputElement && name_search_element && elementsList && notFoundMessage && clearButton && selectedOption && dropdownContent && results_container) {
     // Add input event listener to the input element
     inputElement.addEventListener("input", function() {
         // Get the search query from the input field
@@ -67,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
           li.addEventListener("click", function() {
             inputElement.value = text;
             // Trigger input event to update the search results
-            inputElement.dispatchEvent(new Event("input"));
+            // inputElement.dispatchEvent(new Event("input"));
             name_search_element.style.display = "none";
             input_container.classList.remove('multiselect--active');
         });
@@ -148,6 +158,13 @@ document.addEventListener("DOMContentLoaded", function() {
             dropdownContent.classList.remove('show');
         });
     });
+    search.addEventListener('click', function() {
+      filterItemsByUsername();
+    });
+    window.addEventListener('load', function() {
+      filterItemsByUsername();
+    });
+  
     clearButton.addEventListener("click", function() {
       // Clear the input field
       inputElement.value = "";
@@ -179,3 +196,23 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Input element, content wrapper element, elements list, or not found message not found.");
 }
 });
+
+function filterItemsByUsername() {
+  const desiredUsername = username.innerText // Assuming username is the element containing the desired username
+  const queryResults = document.querySelectorAll('.resultset .row');
+  let count = 0;
+  queryResults.forEach(function(result) {
+      const resultUsername = result.getAttribute('result-user')
+      if (resultUsername === desiredUsername) {
+          // Display the item
+          console.log("Username matched:", result);
+          result.style.display = 'flex';
+          count += 1;
+      } else {
+          // Don't display the item
+          console.log("Username didn't match:", result);
+          result.style.display = 'none';
+      }
+      document.querySelector('#result-amount').innerText =  "Showing " + count + " results"
+  });
+}
