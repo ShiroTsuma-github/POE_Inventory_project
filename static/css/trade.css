@@ -17470,6 +17470,11 @@ button.toast-close-button {
     padding: 8px 12px
 }
 
+#trade .search-bar .status-select {
+    cursor: pointer;
+    user-select: none;
+}
+
 #trade .search-bar .status-select .multiselect__option span.pc::before,
 #trade .search-bar .status-select .multiselect__option span.xbox::before,
 #trade .search-bar .status-select .multiselect__option span.sony::before {
@@ -18028,7 +18033,7 @@ button.toast-close-button {
     table-layout: fixed;
     float: left;
     width: 100%;
-    height: 30px;
+    height: 34px;
     padding: 6px 12px 6px 12px;
     line-height: 18px;
     color: #fff8e1;
@@ -18275,6 +18280,10 @@ button.toast-close-button {
 .filter>span>input.form-control.minmax,
 .filter>span>input.form-control.weight {
     min-width: 64px
+}
+.search-right .filter>span>input.form-control.minmax {
+    min-width: 80px;
+    font-size: 15.6px;
 }
 
 .filter .filter-body>input.form-control.socket,
