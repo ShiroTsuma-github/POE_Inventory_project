@@ -60,7 +60,7 @@ iter_ = -1
 
 
 @app.route('/')
-@cache.cached(timeout=30)
+@cache.cached(timeout=5)
 def index():
     global iter_
     return render_template("results.html",
