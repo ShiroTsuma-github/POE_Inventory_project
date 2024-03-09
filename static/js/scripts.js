@@ -1,4 +1,8 @@
 const log = [];
+let alphabeticalSortOrder = 1;
+let priceSortOrder = 1;
+let dateSortOrder = 1;
+let count = 0;
 
 window.addEventListener("keypress", function(e){
   log.push(e.code);
@@ -35,11 +39,24 @@ document.addEventListener("DOMContentLoaded", function() {
   const league_text = document.querySelector('#leagueText')
   const price_min = document.querySelector('#min-price');
   const price_max = document.querySelector('#max-price');
+  const price_conversion = prices = {
+    'Chaos Orb': 1,
+    'Ancient Orb': 5,
+    'Orb of Annulment': 15,
+    'Orb of Binding': 20,
+    'Divine Orb': 150,
+    'Awakened Sextant': 2,
+    'Elevated Sextant': 200
+}
   const currency = document.querySelector('#select-currency');
   const search = document.querySelector('#search');
   const query = {"username": username.innerText, "item": item_text.value, "league": league_text.innerText, "price_min": price_min.value, "price_max": price_max.value, "currency": currency.innerText.trim()};
   const results_container = document.querySelector('#query_results');
 
+
+  const btn_alphabetical = document.querySelector('#btn_sort_alpha');
+  const btn_price = document.querySelector('#btn_sort_price');
+  const btn_date = document.querySelector('#btn_sort_date');
 
   // Check if the input element and the content element are found
   if (inputElement && name_search_element && elementsList && notFoundMessage && clearButton && selectedOption && dropdownContent && results_container) {
@@ -159,10 +176,50 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     search.addEventListener('click', function() {
-      filterItemsByUsername();
+      const desiredUsername = username.innerText // Assuming username is the element containing the desired username
+      const desiredItem = item_text.value;
+      const queryResults = document.querySelectorAll('.resultset .row');
+      count = 0;
+  queryResults.forEach(function(result) {
+      const resultUsername = result.getAttribute('result-user')
+      if (
+        (resultUsername === desiredUsername) && 
+        ((result.getAttribute('result-name').toLowerCase() ===desiredItem.toLowerCase()) || (desiredItem === "")) &&
+        (((parseInt(result.getAttribute('result-chaos_price')) / price_conversion[currency.innerText.trim()]) >= parseInt(price_min.value)) || (price_min.value === "")) &&
+        (((parseInt(result.getAttribute('result-chaos_price')) / price_conversion[currency.innerText.trim()]) <= parseInt(price_max.value)) || (price_max.value === "")) &&
+        ((result.getAttribute('result-league') === league_text.innerText) || (league_text.innerText === "Affliction"))){
+          // Display the item
+          result.style.display = 'flex';
+          count += 1;
+      } else {
+          // Don't display the item
+          result.style.display = 'none';
+      }
+      document.querySelector('#result-amount').innerText =  "Showing " + count + " results"
+  });
     });
+    btn_alphabetical.addEventListener('click', function() {
+      sortAlphabetically();
+      updateResultAmountText("alphabetically", alphabeticalSortOrder);
+      alphabeticalSortOrder *= -1;
+    });
+    btn_price.addEventListener('click', function() {
+      sortPrice();
+      updateResultAmountText("price", priceSortOrder);
+      priceSortOrder *= -1;
+      });
+    btn_date.addEventListener('click', function() {
+      sortDate();
+      updateResultAmountText("date", dateSortOrder);
+      dateSortOrder *= -1;
+    });
+      window.addEventListener('load', function() {
+        filterItemsByUsername();
+        sortAlphabetically();
+      });
     window.addEventListener('load', function() {
       filterItemsByUsername();
+      sortPrice();
     });
   
     clearButton.addEventListener("click", function() {
@@ -200,19 +257,66 @@ document.addEventListener("DOMContentLoaded", function() {
 function filterItemsByUsername() {
   const desiredUsername = username.innerText // Assuming username is the element containing the desired username
   const queryResults = document.querySelectorAll('.resultset .row');
-  let count = 0;
+  count = 0;
   queryResults.forEach(function(result) {
       const resultUsername = result.getAttribute('result-user')
       if (resultUsername === desiredUsername) {
           // Display the item
-          console.log("Username matched:", result);
           result.style.display = 'flex';
           count += 1;
       } else {
           // Don't display the item
-          console.log("Username didn't match:", result);
           result.style.display = 'none';
       }
       document.querySelector('#result-amount').innerText =  "Showing " + count + " results"
   });
 }
+function sortAlphabetically() {
+  const queryResults = document.querySelectorAll('.resultset .row');
+  const sortedResults = Array.from(queryResults).sort((a, b) => {
+    const aName = a.getAttribute('result-name');
+    const bName = b.getAttribute('result-name');
+    return alphabeticalSortOrder * aName.localeCompare(bName);
+  });
+  const resultset = document.querySelector('.resultset');
+  sortedResults.forEach(result => resultset.appendChild(result));
+}
+
+function sortPrice() {
+  const queryResults = document.querySelectorAll('.resultset .row');
+  const sortedResults = Array.from(queryResults).sort((a, b) => {
+    const aPrice = parseInt(a.getAttribute('result-chaos_price'));
+    const bPrice = parseInt(b.getAttribute('result-chaos_price'));
+    return priceSortOrder * (aPrice - bPrice);
+  });
+  const resultset = document.querySelector('.resultset');
+  sortedResults.forEach(result => resultset.appendChild(result));
+}
+
+function sortDate() {
+  const queryResults = document.querySelectorAll('.resultset .row');
+  const sortedResults = Array.from(queryResults).sort((a, b) => {
+    const aDate = parseCustomDate(a.getAttribute('result-timestamp'));
+    const bDate = parseCustomDate(b.getAttribute('result-timestamp'));
+    return dateSortOrder * (bDate - aDate);
+  });
+  const resultset = document.querySelector('.resultset');
+  sortedResults.forEach(result => resultset.appendChild(result));
+}
+
+function parseCustomDate(dateString) {
+  // Split the dateString into its components
+  const [day, month, year, hour, minute, second] = dateString.split(/[ .:]+/);
+  const time = `${hour}:${minute}:${second}`;
+  // Construct a Date object
+  const yearDigits = year.length === 2 ? `20${year}` : year; // Assuming 20th century
+  const formattedDateString = `${yearDigits}-${month}-${day}T${time}`;
+  return new Date(formattedDateString);
+}
+function updateResultAmountText(sortType, sortOrder) {
+  const sortOrderText = sortOrder === 1 ? "(ascending)" : "(descending)";
+  document.querySelector('#result-amount').innerText =  "Showing " + count + " results";
+  document.getElementById('result-amount').textContent += ` | ${sortType} ${sortOrderText}`;
+}
+
+

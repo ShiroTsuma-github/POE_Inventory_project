@@ -3,6 +3,9 @@
 <div class="results">
     <div class="row row-total">
         <h3 id="result-amount">Showing ? results</h3> 
+        <button title="Sort Alphabetically" class="layout-btn layout-immersion" id="btn_sort_alpha"></button>
+        <button title="Sort by Price" class="layout-btn layout-compact" id="btn_sort_price"></button>
+        <button title="Sort by Date" class="layout-btn layout-compact-two" id="btn_sort_date"></button>
     </div>
     <div class="resultset" id="query_results">
         {% for result in results %}
@@ -40,8 +43,9 @@
                             <span data-field="price" class="s sorted sorted-asc"><span class="price-label fixed-price">↓</span><br>
                             <span>{{ prices[result['currency']] * result['price'] }}</span><span>×</span><span class="currency-text currency-image"><img
                                     src="{{ url_for('static', filename='images/orbs/orb_chaos.png')}}" width="25px"
-                                    ><span>Chaos Orb</span></span></span></div>
+                                    ><span>Chaos Orb</span></span></span>
                                     {% endif %}
+                    </div>
                     <div data-field="indexed" class="info">
                         <center><small>added {{ result['timestamp'] }}</small></center>
                         <span><button class="btn btn-default" style="width: 100%;color:rgb(226,226,226); border:1px solid rgb(138,86,9); background-color: rgb(90,56,6);">Remove Item</button></span>

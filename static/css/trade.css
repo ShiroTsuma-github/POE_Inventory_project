@@ -16525,6 +16525,38 @@ fieldset[disabled] .multiselect {
     border-top-left-radius: 0;
     border-top-right-radius: 0
 }
+#btn_sort_alpha{
+    background-color:rgba(0, 0, 0, 0);
+    background-image: url('../images/basic/sort_alpha_2_25.png');
+    /* background-size: contain; */
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    /* filter: invert(29%) sepia(5%) saturate(3980%) hue-rotate(318deg) brightness(75%) contrast(90%); */
+    filter: grayscale(1) invert(1);
+    -webkit-filter: grayscale(1) invert(1);
+}
+
+#btn_sort_price{
+    background-color:rgba(0, 0, 0, 0);
+    background-image: url('../images/basic/sort_price_25.png');
+    /* background-size: contain; */
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    /* filter: invert(29%) sepia(5%) saturate(3980%) hue-rotate(318deg) brightness(75%) contrast(90%); */
+    filter: grayscale(1) invert(1);
+    -webkit-filter: grayscale(1) invert(1);
+}
+
+#btn_sort_date{
+    background-color:rgba(0, 0, 0, 0);
+    background-image: url('../images/basic/sort_date_25.png');
+    /* background-size: contain; */
+    background-position: 2px 2px;
+    background-repeat: no-repeat;
+    /* filter: invert(29%) sepia(5%) saturate(3980%) hue-rotate(318deg) brightness(75%) contrast(90%); */
+    filter: grayscale(1) invert(1);
+    -webkit-filter: grayscale(1) invert(1);
+}
 
 .multiselect__input,
 .multiselect__single {
@@ -18439,8 +18471,8 @@ button.toast-close-button {
 .results .row.row-total .layout-btn.layout-immersion,
 .results #trade .row-total.search-bar .layout-btn.layout-immersion,
 #trade .results .row-total.search-bar .layout-btn.layout-immersion {
-    /* background: url('/protected/image/gen/trade.png?v=1707859052315&key=nIFEZiE4lkptZMARNY-yNQ') no-repeat; */
-    background-position: -290px -157px;
+    /* background: url('/protected/image/gen/trade.png?v=1707859052315&key=nIFEZiE4lkptZMARNY-yNQ') no-repeat;
+    background-position: -290px -157px; */
     right: 84px
 }
 
@@ -18448,7 +18480,7 @@ button.toast-close-button {
 .results #trade .row-total.search-bar .layout-btn.layout-compact,
 #trade .results .row-total.search-bar .layout-btn.layout-compact {
     /* background: url('/protected/image/gen/trade.png?v=1707859052315&key=nIFEZiE4lkptZMARNY-yNQ') no-repeat; */
-    background-position: -230px -157px;
+    /* background-position: -230px -157px; */
     right: 46px
 }
 
@@ -18456,7 +18488,7 @@ button.toast-close-button {
 .results #trade .row-total.search-bar .layout-btn.layout-compact-two,
 #trade .results .row-total.search-bar .layout-btn.layout-compact-two {
     /* background: url('/protected/image/gen/trade.png?v=1707859052315&key=nIFEZiE4lkptZMARNY-yNQ') no-repeat; */
-    background-position: -200px -157px;
+    /* background-position: -200px -157px; */
     right: 8px
 }
 

@@ -12,7 +12,7 @@
 },
 {
     "id": 2,
-    "user": "Hubinix",
+    "user": "ShiroTsuma",
     "timestamp": "24.03.08  21:58:42",
     "item_name": "Vengeance Fingers Ambush Mitts",
     "item_image": "images/items/shirotsuma_gloves_basic_1.png",
@@ -21,4 +21,16 @@
     "price": 1,
     "currency": "Chaos Orb",
     "currency_image": "images/orbs/orb_chaos.png"
+},
+{
+    "id": 3,
+    "user": "ShiroTsuma",
+    "timestamp": "24.03.09  12:23:14",
+    "item_name": "Innsbury Edge Elder Sword",
+    "item_image": "images/items/shirotsuma_innsbury_edge_1.png",
+    "item_description": "images/descriptions/shirotsuma_innsbury_edge_1.png",
+    "league": "Affliction",
+    "price": 2,
+    "currency": "Ancient Orb",
+    "currency_image": "images/orbs/orb_ancient.png"
 }]
