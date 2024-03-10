@@ -306,7 +306,7 @@ function sortDate() {
 
 function parseCustomDate(dateString) {
   // Split the dateString into its components
-  const [day, month, year, hour, minute, second] = dateString.split(/[ .:]+/);
+  const [year,month,day, hour, minute, second] = dateString.split(/[ .:]+/);
   const time = `${hour}:${minute}:${second}`;
   // Construct a Date object
   const yearDigits = year.length === 2 ? `20${year}` : year; // Assuming 20th century
@@ -319,4 +319,7 @@ function updateResultAmountText(sortType, sortOrder) {
   document.getElementById('result-amount').textContent += ` | ${sortType} ${sortOrderText}`;
 }
 
+function removebyId(){
+  
+}
 

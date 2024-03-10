@@ -48,12 +48,45 @@
                     </div>
                     <div data-field="indexed" class="info">
                         <center><small>added {{ result['timestamp'] }}</small></center>
-                        <span><button class="btn btn-default" style="width: 100%;color:rgb(226,226,226); border:1px solid rgb(138,86,9); background-color: rgb(90,56,6);">Remove Item</button></span>
+                        <span><button class="btn btn-default btn_remove_by_id" result-id="{{ result['id'] }}" style="width: 100%;color:rgb(226,226,226); border:1px solid rgb(138,86,9); background-color: rgb(90,56,6);">Remove Item</button></span>
                     </div> 
                 </div>
             </div>
         
         {% endfor %}
+        <script>
+            $(document).ready(function() {
+              // Add click event listener to the buttons
+              $(".btn_remove_by_id").click(function() {
+                // Extract the result ID from the button's attribute
+                var resultId = $(this).closest(".row").attr("result-id");
+                var parentRow = $(this).closest(".row"); // Store reference to parent row
+                
+                // Send an AJAX request to the route /del/<id>
+                $.ajax({
+                  url: "/del/" + resultId,
+                  type: "GET",
+                  success: function(response) {
+                    // Handle success response if needed
+                    parentRow.remove();
+                    decreaseResultCount();
+                    // console.log("Item with ID " + resultId + " removed successfully");
+                  },
+                  error: function(xhr, status, error) {
+                    // Handle error response if needed
+                    console.error("Error removing item:", error);
+                  }
+                });
+              });
+            });
+            function decreaseResultCount() {
+                var resultAmount = $("#result-amount");
+                var currentCount = parseInt(resultAmount.text().match(/\d+/)[0]);
+                if (!isNaN(currentCount) && currentCount > 0) {
+                resultAmount.text("Showing " + (currentCount - 1) + " results");
+                }
+            }
+</script>
         <!-- <div class="row controls"><button class="btn load-more-btn"><span>Load More</span></button></div> -->
     </div>
 </div>

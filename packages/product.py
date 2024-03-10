@@ -1,5 +1,5 @@
 from packages import app
-from flask import render_template
+from flask import jsonify, redirect, render_template, url_for
 import os
 from random import choice
 from datetime import datetime
@@ -60,7 +60,7 @@ iter_ = -1
 
 
 @app.route('/')
-@cache.cached(timeout=5)
+# @cache.cached(timeout=5)
 def index():
     global iter_
     return render_template("results.html",
@@ -77,3 +77,20 @@ def index():
     #                        userdata=userData[iter_ % 4],
     #                        leagues=leagues,
     #                        currencies=currencies)
+
+
+@app.route('/del/<id>')
+def delete(id):
+    global database
+    database = [i for i in database if i['id'] != int(id)]
+    return jsonify(success=True)
+    # json.dump(database, open(ROOT_DIR + "data/database.json", "w"))
+    # return render_template("results.html",
+    #                        items=items,
+    #                        userdata=userData[0],
+    #                        leagues=leagues,
+    #                        currencies=currencies,
+    #                        item_amount=item_amount,
+    #                        results=database,
+    #                        prices=prices)
+    # return redirect(url_for('index'))
