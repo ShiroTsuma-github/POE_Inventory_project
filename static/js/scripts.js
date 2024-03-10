@@ -326,8 +326,45 @@ function updateResultAmountText(sortType, sortOrder) {
     document.querySelector('#result-amount').innerText = "Showing " + count + " results";
     document.getElementById('result-amount').textContent += ` | ${sortType} ${sortOrderText}`;
 }
+function displayImage(input, index) {
+    const file = input.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = new Image();
+            img.src = e.target.result;
+            img.onload = function() {
+                const containerId = 'container' + (index + 1); // Generating container ID dynamically
+                const container = document.getElementById(containerId);
+                if (container) {
+                    // Check if image already exists, if not, create a new one
+                    let imgElement = container.querySelector('img');
+                    if (!imgElement) {
+                        imgElement = new Image();
+                        container.appendChild(imgElement);
+                    }
+                    const pickImgText = container.querySelector('.pick-img-text');
+                    if (pickImgText) {
+                        pickImgText.style.display = 'none';
+                    }
 
-function removebyId() {
+                    // Set image source
+                    imgElement.src = img.src;
 
+                    // Show file input
+                    input.style.display = 'block';
+
+                    // Add event listener to image
+                    imgElement.addEventListener('click', function() {
+                        // Reopen file input
+                        input.value = null;
+                        input.style.display = 'block'; // Show file input
+                    });
+                } else {
+                    console.error("Container not found.");
+                }
+            };
+        };
+        reader.readAsDataURL(file);
+    }
 }
-

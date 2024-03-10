@@ -23,3 +23,68 @@ html {
 /* .content{
     background-color: blue;
 } */
+/* .image-container {
+    width: 47.5%;
+    height: 20vh;
+    border: 1px solid #465260;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+} */
+
+.image-container {
+    width: 47.5%;
+    height: 20vh;
+    border: 1px solid #465260;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container1{
+    width: 37.5%;
+}
+#container2{
+    width: 57.5%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.pick-img-text {
+    font-size: 16px;
+    color: #465260;
+    position: absolute;
+    pointer-events: none;
+}
