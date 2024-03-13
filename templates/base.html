@@ -60,7 +60,7 @@
             <div class="search-panel">
                 <div class="search-bar">
                     <div class="search-left">
-                        <div tabindex="0" class="multiselect search-select" id="search-container" style="width: 100%;">
+                        <div tabindex="0" class="multiselect search-select" id="search-container" style="width: 100%; z-index: 99;">
                             <div class="multiselect__select"></div>
                             <div class="multiselect__tags">
                                 <div class="multiselect__tags-wrap" style="display: none;">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="multiselect__content-wrapper" id="item-list"
                                 style="max-height: 300px; display: none;">
-                                <ul class="multiselect__content" style="display: inline-block;">
+                                <ul class="multiselect__content" style="display: inline-block;" id="search-item-id">
 
                                     {% for item in items %}
                                     <li class="multiselect__element"><span data-select="" data-selected=""
@@ -179,7 +179,7 @@
                                 </div>
                                 <span class="sep"></span>
                                 <div class="filter filter-property spaced"
-                                    style="width: 95%; transform: translateX(5%);">
+                                    style="width: 95%; transform: translateX(5%); z-index: 50;">
 
                                     <div tabindex="0" class="multiselect search-select" id="search-container2"
                                         style="width: 100%;">
@@ -191,9 +191,9 @@
                                             <input name="" type="text" autocomplete="off" placeholder="Item Name"
                                                 class="multiselect__input" id="item-input2">
                                         </div>
-                                        <div class="multiselect__content-wrapper" id="item-list"
+                                        <div class="multiselect__content-wrapper" id="item-list2"
                                             style="max-height: 300px; display: none;">
-                                            <ul class="multiselect__content" style="display: inline-block;">
+                                            <ul class="multiselect__content" style="display: inline-block;" id="add-item-id">
 
                                                 {% for item in items %}
                                                 <li class="multiselect__element"><span data-select="" data-selected=""
@@ -202,7 +202,7 @@
                                                             }}</span></span>
                                                 </li>
                                                 {% endfor %}
-                                                <li id="item-not-found" style="display: none;"><span
+                                                <li id="item-not-found2" style="display: none;"><span
                                                         class="multiselect__option"><span>No
                                                             elements found. Consider
                                                             changing the search
@@ -226,32 +226,34 @@
                                             Currency:
 
                                         </div> <span class="sep"></span>
-                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;">
+                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;" id="currency-container2">
                                             <div class="multiselect__select"></div>
                                             <div class="multiselect__tags">
                                                 <div class="multiselect__tags-wrap" style="display: none;"></div>
 
                                                 <div class="multiselect__spinner" style="display: none;"></div> <span
-                                                    class="multiselect__single" id="select-currency"><img
+                                                    class="multiselect__single" id="select-currency2"><img
                                                         src="{{ url_for('static', filename='images/orbs/orb_chaos.png')}}"
                                                         height="25px"> Chaos Orb</span>
                                             </div>
-                                            <div class="multiselect__content-wrapper" id="league-options"
-                                                style="max-height: 300px; display: none;">
-                                                <ul class="multiselect__content" style="display: inline-block;">
+                                            <div class="multiselect__content-wrapper" id="currency-options2"
+                                style="max-height: 300px; display: none;">
+                                <ul class="multiselect__content" style="display: inline-block;">
 
-                                                    <li class="multiselect__element"><span data-select=""
-                                                            data-selected="" data-deselect=""
-                                                            class="multiselect__option  multiselect__option--selected"><span>Affliction</span></span>
-                                                    </li>
-                                                    {% for league in leagues %}
-                                                    <li class="multiselect__element"><span data-select=""
-                                                            data-selected="" data-deselect=""
-                                                            class="multiselect__option"><span>{{ league }}
-                                                            </span></span>
-                                                        {% endfor %}
-                                                </ul>
-                                            </div>
+                                    <li class="multiselect__element"><span data-select="" data-selected=""
+                                            data-deselect=""
+                                            class="multiselect__option  multiselect__option--selected"><span><img
+                                                    src="{{ url_for('static', filename='images/orbs/orb_chaos.png')}}"
+                                                    height="25px"> Chaos Orb</span></span>
+                                    </li>
+                                    {% for currency in currencies %}
+                                    <li class="multiselect__element"><span data-select="" data-selected=""
+                                            data-deselect="" class="multiselect__option"><span><img
+                                                    src="{{ url_for('static', filename=currency[1])}}" height="25px"> {{ currency[0] }}
+                                            </span></span>
+                                        {% endfor %}
+                                </ul>
+                            </div>
                                         </div>
                                     </span>
                                 </div>
@@ -260,33 +262,31 @@
                                             League:
 
                                         </div> <span class="sep"></span>
-                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;">
+                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;" id="league-container2">
                                             <div class="multiselect__select"></div>
                                             <div class="multiselect__tags">
                                                 <div class="multiselect__tags-wrap" style="display: none;"></div>
 
                                                 <div class="multiselect__spinner" style="display: none;"></div> <span
-                                                    class="multiselect__single" id="select-currency">Affliction</span>
+                                                    class="multiselect__single" id="leagueText2">Affliction</span>
                                             </div>
-                                            <div class="multiselect__content-wrapper" id="currency-options"
+                                            <div class="multiselect__content-wrapper" id="league-options2"
                                                 style="max-height: 300px; display: none;">
                                                 <ul class="multiselect__content" style="display: inline-block;">
 
                                                     <li class="multiselect__element"><span data-select=""
                                                             data-selected="" data-deselect=""
-                                                            class="multiselect__option  multiselect__option--selected"><span><img
-                                                                    src="{{ url_for('static', filename='images/orbs/orb_chaos.png')}}"
-                                                                    height="25px">Chaos Orb</span></span>
+                                                            class="multiselect__option  multiselect__option--selected"><span>Affliction</span></span>
                                                     </li>
-                                                    {% for currency in currencies %}
-                                                    <li class="multiselect__element"><span data-select=""
+                                                    {% for league in leagues %}
+                                                    <li class="multiselect__element">
+                                                        <span data-select=""
                                                             data-selected="" data-deselect=""
-                                                            class="multiselect__option"><span><img
-                                                                    src="{{ url_for('static', filename=currency[1])}}"
-                                                                    height="25px">{{
-                                                                currency[0] }}
-                                                            </span></span>
-                                                        {% endfor %}
+                                                            class="multiselect__option">
+                                                            <span>{{ league }}</span>
+                                                        </span>
+                                                    </li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                         </div>
@@ -295,7 +295,7 @@
                             </div>
                             <div class="clear"></div>
                         </div>
-                    </div>
+                    
                     <div class="search-advanced-pane brown">
                         <div class="filter-group-header">
                             <div class="filter"><span class="input-group-btn"><button
@@ -317,7 +317,8 @@
                                 <span class="pick-img-text">Description image</span>
                                 </div>
                         </div>
-                    </div>;
+                    </div>
+                </div>
                 </div>
 
                 <div class="controls" style="z-index: 1;">

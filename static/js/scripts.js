@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const inputElement = document.querySelector("#item-input");
     const input_container = document.querySelector("#search-container");
 
+    const inputElement2 = document.querySelector("#item-input2");
+    const input_container2 = document.querySelector("#search-container2");
+    const name_search_element2 = document.querySelector("#item-list2");
+
     // Get the element with class "multiselect__content-wrapper"
     const name_search_element = document.querySelector("#item-list");
 
@@ -28,12 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedOption = document.querySelector('#league-container');
     const dropdownContent = document.querySelector('#league-options');
 
-    const elementsList = document.querySelector(".multiselect__content");
+    const selectedOption2 = document.querySelector('#league-container2');
+    const dropdownContent2 = document.querySelector('#league-options2');
+
+    const elementsList = document.querySelector("#search-item-id");
+    const elementsList2 = document.querySelector("#add-item-id");
 
     const currency_container = document.querySelector('#currency-container');
     const currency_options = document.querySelector('#currency-options');
+
+    const currency_container2 = document.querySelector('#currency-container2');
+    const currency_options2 = document.querySelector('#currency-options2');
+
     // Get the "No elements found" message element
     const notFoundMessage = document.getElementById("item-not-found");
+    const notFoundMessage2 = document.getElementById("item-not-found2");
 
     const clearButton = document.querySelector(".clear-btn");
 
@@ -52,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'Elevated Sextant': 200
     }
     const currency = document.querySelector('#select-currency');
+    const currency2 = document.querySelector('#select-currency2');
     const search = document.querySelector('#search');
     const query = { "username": username.innerText, "item": item_text.value, "league": league_text.innerText, "price_min": price_min.value, "price_max": price_max.value, "currency": currency.innerText.trim() };
     const results_container = document.querySelector('#query_results');
@@ -121,6 +135,67 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         });
+
+        inputElement2.addEventListener("input", function () {
+            // Get the search query from the input field
+            const searchQuery = inputElement2.value.trim().toLowerCase();
+            console.log(searchQuery);
+            // Flag to track if any matching elements are found
+            let matchFound = false;
+
+            input_container2.classList.add('multiselect--active');
+
+            // Iterate over each element in the list
+            elementsList2.querySelectorAll(".multiselect__element").forEach(function (li) {
+                // Get the text content of the element
+                const text = li.textContent.trim();
+
+                // Check if the text contains the search query
+                const index = text.toLowerCase().indexOf(searchQuery);
+                if (index !== -1) {
+                    // Wrap the matching part of the text in a <span> element with a specific class for highlighting
+                    const highlightedText = text.substring(0, index) +
+                        "<strong>" + text.substring(index, index + searchQuery.length) + "</strong>" +
+                        text.substring(index + searchQuery.length);
+                    // Update the content of the element with the highlighted text
+                    li.innerHTML = highlightedText;
+
+                    // Show the element
+                    li.style.display = "block";
+                    matchFound = true;
+                } else {
+                    // Hide the element
+                    li.style.display = "none";
+                }
+                li.addEventListener("click", function () {
+                    inputElement2.value = text;
+                    // Trigger input event to update the search results
+                    // inputElement.dispatchEvent(new Event("input"));
+                    name_search_element2.style.display = "none";
+                    input_container2.classList.remove('multiselect--active');
+                });
+            });
+
+            // Show or hide the "No elements found" message based on the matchFound flag
+            if (matchFound) {
+                notFoundMessage2.style.display = "none";
+            } else {
+                notFoundMessage2.style.display = "block";
+            }
+
+            // Set the display property of the content wrapper based on search query
+            if (searchQuery !== "") {
+                // Set the display property to make it visible
+                name_search_element2.style.display = "block"; // or "inline", "flex", etc. depending on your layout needs
+            } else {
+                // Set the display property to hide it
+                name_search_element2.style.display = "none";
+                input_container2.classList.remove('multiselect--active');
+            }
+
+        });
+
+
         // Add event listener to the selected option
         selectedOption.addEventListener('click', function () {
             // Toggle the visibility of the dropdown content
@@ -150,6 +225,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 dropdownContent.classList.remove('show');
             });
         });
+
+        selectedOption2.addEventListener('click', function () {
+            // Toggle the visibility of the dropdown content
+            dropdownContent2.style.display = dropdownContent2.style.display === "block" ? "none" : "block";
+            if (dropdownContent2.style.display === "block") {
+                selectedOption2.classList.add('multiselect--active');
+            }
+            else {
+                selectedOption2.classList.remove('multiselect--active');
+            }
+
+        });
+
+        let options2 = dropdownContent2.querySelectorAll('.multiselect__element');
+
+        options2.forEach(function (option) {
+            option.addEventListener('click', function () {
+                options2.forEach(function (opt) {
+                    opt.querySelector('.multiselect__option').classList.remove('multiselect__option--selected');
+                });
+                option.querySelector('.multiselect__option').classList.add('multiselect__option--selected');
+                // Replace the text of the selected option
+                let temp = document.querySelector('#leagueText2');
+                temp.textContent = option.textContent;
+
+
+                // Hide the dropdown content
+                dropdownContent2.classList.remove('show');
+            });
+        });
+
         currency_container.addEventListener('click', function () {
             // Toggle the visibility of the dropdown content
             currency_options.style.display = currency_options.style.display === "block" ? "none" : "block";
@@ -175,9 +281,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 // Hide the dropdown content
-                dropdownContent.classList.remove('show');
+                // dropdownContent.classList.remove('show');
             });
         });
+
+        currency_container2.addEventListener('click', function () {
+            console.log('clicked');
+            // Toggle the visibility of the dropdown content
+            currency_options2.style.display = currency_options2.style.display === "block" ? "none" : "block";
+            if (currency_options2.style.display === "block") {
+                currency_container2.classList.add('multiselect--active');
+            }
+            else {
+                currency_container2.classList.remove('multiselect--active');
+            }
+
+        });
+        let curr_options2 = currency_options2.querySelectorAll('.multiselect__element');
+
+        curr_options2.forEach(function (option) {
+            option.addEventListener('click', function () {
+                curr_options2.forEach(function (opt) {
+                    opt.querySelector('.multiselect__option').classList.remove('multiselect__option--selected');
+                });
+                option.querySelector('.multiselect__option').classList.add('multiselect__option--selected');
+                // Replace the text of the selected option
+                let temp = document.querySelector('#select-currency2');
+                temp.innerHTML = option.children[0].innerHTML;
+
+
+                // Hide the dropdown content
+                // dropdownContent.classList.remove('show');
+            });
+        });
+
+
         search.addEventListener('click', function () {
             const desiredUsername = username.innerText // Assuming username is the element containing the desired username
             const desiredItem = item_text.value;
