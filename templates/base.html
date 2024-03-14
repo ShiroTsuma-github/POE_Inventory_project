@@ -218,7 +218,7 @@
 
                                         </div> <span class="sep"></span> <input type="number" maxlength="4"
                                             pattern="[0-9.,]*" inputmode="numeric" step="any"
-                                            class="form-control minmax" style="min-width: 12vw;">
+                                            class="form-control minmax" style="min-width: 12vw;" id="additemnumer">
                                     </span>
                                 </div>
                                 <div class="filter filter-property spaced"> <span class="filter-body">
@@ -226,7 +226,7 @@
                                             Currency:
 
                                         </div> <span class="sep"></span>
-                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;" id="currency-container2">
+                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw; user-select: none;" id="currency-container2">
                                             <div class="multiselect__select"></div>
                                             <div class="multiselect__tags">
                                                 <div class="multiselect__tags-wrap" style="display: none;"></div>
@@ -262,7 +262,7 @@
                                             League:
 
                                         </div> <span class="sep"></span>
-                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw;" id="league-container2">
+                                        <div tabindex="-1" class="multiselect filter-select" style="width:12vw; user-select: none;" id="league-container2">
                                             <div class="multiselect__select"></div>
                                             <div class="multiselect__tags">
                                                 <div class="multiselect__tags-wrap" style="display: none;"></div>
@@ -272,7 +272,7 @@
                                             </div>
                                             <div class="multiselect__content-wrapper" id="league-options2"
                                                 style="max-height: 300px; display: none;">
-                                                <ul class="multiselect__content" style="display: inline-block;">
+                                                <ul class="multiselect__content" id="addformleague" style="display: inline-block;">
 
                                                     <li class="multiselect__element"><span data-select=""
                                                             data-selected="" data-deselect=""
@@ -326,13 +326,12 @@
                             style="display: none;"><span class="plus"></span> <span>
                                 Search</span></button></div>
                     <div class="controls-center"><button type="button" class="btn search-btn"
-                            id="search"><span>Search</span></button>
+                            id="search"><span id="searchText">Search</span></button>
                     </div>
-                    <div class="controls-right"><button type="button" class="btn clear-btn"><span>Clear</span></button>
+                    <div class="controls-right"><button type="button" class="btn clear-btn"><span id="clearText">Clear</span></button>
                         <button type="button" class="btn toggle-search-btn"><span alt="Toggle"
                                 class="chevron collapsed"></span>
-                            <span>Add
-                                Item</span></button>
+                            <span id="additemtext">Add Item</span></button>
                     </div>
                     <div class="clear"></div>
                 </div>

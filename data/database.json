@@ -1,36 +1,38 @@
-[{
-    "id": 1,
-    "user": "ShiroTsuma",
-    "timestamp": "08.03.24  21:56:08",
-    "item_name": "Void Battery Prophecy Wand",
-    "item_image": "images/items/shirotsuma_voidbattery_1.png",
-    "item_description": "images/descriptions/shirotsuma_voidbattery_1.png",
-    "league": "Affliction",
-    "price": 13,
-    "currency": "Divine Orb",
-    "currency_image": "images/orbs/orb_divine.png"
-},
-{
-    "id": 2,
-    "user": "ShiroTsuma",
-    "timestamp": "08.03.24  21:58:42",
-    "item_name": "Vengeance Fingers Ambush Mitts",
-    "item_image": "images/items/shirotsuma_gloves_basic_1.png",
-    "item_description": "images/descriptions/shirotsuma_gloves_basic_1.png",
-    "league": "Affliction",
-    "price": 1,
-    "currency": "Chaos Orb",
-    "currency_image": "images/orbs/orb_chaos.png"
-},
-{
-    "id": 3,
-    "user": "ShiroTsuma",
-    "timestamp": "09.03.24  12:23:14",
-    "item_name": "Innsbury Edge Elder Sword",
-    "item_image": "images/items/shirotsuma_innsbury_edge_1.png",
-    "item_description": "images/descriptions/shirotsuma_innsbury_edge_1.png",
-    "league": "Affliction",
-    "price": 2,
-    "currency": "Ancient Orb",
-    "currency_image": "images/orbs/orb_ancient.png"
-}]
+[
+    {
+        "id": 1,
+        "user": "ShiroTsuma",
+        "timestamp": "08.03.24  21:56:08",
+        "item_name": "Void Battery Prophecy Wand",
+        "item_image": "images/items/shirotsuma_voidbattery_1.png",
+        "item_description": "images/descriptions/shirotsuma_voidbattery_1.png",
+        "league": "Affliction",
+        "price": 13,
+        "currency": "Divine Orb",
+        "currency_image": "images/orbs/orb_divine.png"
+    },
+    {
+        "id": 2,
+        "user": "ShiroTsuma",
+        "timestamp": "08.03.24  21:58:42",
+        "item_name": "Vengeance Fingers Ambush Mitts",
+        "item_image": "images/items/shirotsuma_gloves_basic_1.png",
+        "item_description": "images/descriptions/shirotsuma_gloves_basic_1.png",
+        "league": "Affliction",
+        "price": 1,
+        "currency": "Chaos Orb",
+        "currency_image": "images/orbs/orb_chaos.png"
+    },
+    {
+        "id": 3,
+        "user": "ShiroTsuma",
+        "timestamp": "09.03.24  12:23:14",
+        "item_name": "Innsbury Edge Elder Sword",
+        "item_image": "images/items/shirotsuma_innsbury_edge_1.png",
+        "item_description": "images/descriptions/shirotsuma_innsbury_edge_1.png",
+        "league": "Affliction",
+        "price": 2,
+        "currency": "Ancient Orb",
+        "currency_image": "images/orbs/orb_ancient.png"
+    }
+]

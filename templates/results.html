@@ -20,7 +20,7 @@
                 <div class="newItemContainer itemRendered iW1 iH1">
                     <div class="iconContainer">
                         <div class="icon"><img
-                                src="{{ url_for('static', filename=result['item_image'])}}"
+                                src="{{ url_for('static', filename=result['item_image'])}}" style="max-width: 200px;"
                                 alt="">
                             <div class="sockets numSockets0"></div> 
                         </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="middle"  style="object-fit: contain;">
                 <div class="itemPopupContainer newItemPopup gemPopup">
-                    <img src="{{ url_for('static', filename=result['item_description'])}}">
+                    <img src="{{ url_for('static', filename=result['item_description'])}}" style="max-width: 750px; width: 100%;">
                 </div>
             </div>
             <div class="right">
@@ -56,36 +56,40 @@
         {% endfor %}
         <script>
             $(document).ready(function() {
-              // Add click event listener to the buttons
-              $(".btn_remove_by_id").click(function() {
-                // Extract the result ID from the button's attribute
-                var resultId = $(this).closest(".row").attr("result-id");
-                var parentRow = $(this).closest(".row"); // Store reference to parent row
-                
-                // Send an AJAX request to the route /del/<id>
-                $.ajax({
-                  url: "/del/" + resultId,
-                  type: "GET",
-                  success: function(response) {
-                    // Handle success response if needed
-                    parentRow.remove();
-                    decreaseResultCount();
-                    // console.log("Item with ID " + resultId + " removed successfully");
-                  },
-                  error: function(xhr, status, error) {
-                    // Handle error response if needed
-                    console.error("Error removing item:", error);
-                  }
-                });
-              });
-            });
-            function decreaseResultCount() {
-                var resultAmount = $("#result-amount");
-                var currentCount = parseInt(resultAmount.text().match(/\d+/)[0]);
-                if (!isNaN(currentCount) && currentCount > 0) {
-                resultAmount.text("Showing " + (currentCount - 1) + " results");
-                }
+    // Add click event listener to the document and delegate it to .btn_remove_by_id buttons
+    $(document).on('click', '.btn_remove_by_id', function() {
+        // Extract the result ID from the button's attribute
+        var resultId = $(this).closest(".row").attr("result-id");
+        var parentRow = $(this).closest(".row"); // Store reference to parent row
+
+        // Send an AJAX request to the route /del/<id>
+        if (confirm("Are you sure you want to remove this item?")) {
+        $.ajax({
+            url: "/del/" + resultId,
+            type: "GET",
+            success: function(response) {
+                // Handle success response if needed
+                parentRow.remove();
+                decreaseResultCount();
+                // console.log("Item with ID " + resultId + " removed successfully");
+            },
+            error: function(xhr, status, error) {
+                // Handle error response if needed
+                console.error("Error removing item:", error);
             }
+        });
+    };
+    });
+
+    function decreaseResultCount() {
+        var resultAmount = $("#result-amount");
+        var currentCount = parseInt(resultAmount.text().match(/\d+/)[0]);
+        if (!isNaN(currentCount) && currentCount > 0) {
+            resultAmount.text("Showing " + (currentCount - 1) + " results");
+        }
+    }
+});
+
 </script>
         <!-- <div class="row controls"><button class="btn load-more-btn"><span>Load More</span></button></div> -->
     </div>
