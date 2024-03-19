@@ -724,4 +724,32 @@ function addItemToPage(item) {
     });
     const resultset = document.querySelector('.resultset');
     sortedResults.forEach(result => resultset.appendChild(result));
+    const desiredLeague = document.getElementById('leagueText').textContent;
+    // if (item.league === desiredLeague) {
+    //     increaseResultCount();
+    // }
+    countDisplayed();
+    
+}
+function increaseResultCount() {
+    var resultAmount = $("#result-amount");
+    var currentCount = parseInt(resultAmount.text().match(/\d+/)[0]);
+    if (!isNaN(currentCount) && currentCount > 0) {
+        resultAmount.text("Showing " + (currentCount + 1) + " results");
+    }
+}
+function countDisplayed() {
+    var resultAmount = $("#result-amount");
+    var currentCount = 0;
+    const resultset = document.querySelector('.resultset');
+    resultset.querySelectorAll('.row').forEach(function (result) {
+        if (result.style.display === 'flex') {
+            currentCount += 1;
+        }
+    });
+
+
+    if (!isNaN(currentCount) && currentCount > 0) {
+        resultAmount.text("Showing " + (currentCount + 1) + " results");
+    }
 }

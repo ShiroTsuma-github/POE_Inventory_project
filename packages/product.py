@@ -10,7 +10,6 @@ from flask_caching import Cache
 import json
 
 
-
 cache = Cache(config={'CACHE_TYPE': 'SimpleCache'})
 CORS(app)
 app.config["DEBUG"] = True
