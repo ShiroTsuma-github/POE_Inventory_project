@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         currency_container2.addEventListener('click', function () {
-            console.log('clicked');
+            // console.log('clicked');;
             // Toggle the visibility of the dropdown content
             currency_options2.style.display = currency_options2.style.display === "block" ? "none" : "block";
             if (currency_options2.style.display === "block") {
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         search.addEventListener('click', function () {
             if (!menuExpanded) {
-                console.log('menu not expanded');
+                // console.log('menu not expanded');
                 const desiredUsername = username.innerText // Assuming username is the element containing the desired username
                 const desiredItem = item_text.value;
                 const queryResults = document.querySelectorAll('.resultset .row');
@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         ((result.getAttribute('result-name').toLowerCase() === desiredItem.toLowerCase()) || (desiredItem === "")) &&
                         (((parseInt(result.getAttribute('result-chaos_price')) / price_conversion[tesdf]) >= parseInt(price_min.value)) || (price_min.value === "")) &&
                         (((parseInt(result.getAttribute('result-chaos_price')) / price_conversion[tesdf]) <= parseInt(price_max.value)) || (price_max.value === "")) &&
-                        ((result.getAttribute('result-league') === league_text.innerText) || (league_text.innerText === "Affliction"))) {
+                        ((result.getAttribute('result-league') === league_text.innerText))) {
                         // Display the item
                         result.style.display = 'flex';
                         count += 1;
@@ -350,10 +350,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         result.style.display = 'none';
                     }
                     document.querySelector('#result-amount').innerText = "Showing " + count + " results"
+                    alphabeticalSortOrder = 1;
+                    priceSortOrder = 1;
+                    dateSortOrder = 1;
+                    sortPrice();
                 });
             }
             else {
-                console.log('menu expanded');
                 
                 if (!valueSelected) {
                     alert("Please select an item from the list.");
@@ -397,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     formData.append('currency', currency);
                     formData.append('item_image', itemImage);
                     formData.append('item_description', descriptionImage);
-                    console.log([...formData.entries()])
+                    // console.log([...formData.entries()])
 
                     // Send Fetch API POST request
                     fetch('http://localhost:5000/add', {
@@ -446,12 +449,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         window.addEventListener('load', function () {
             filterItemsByUsername();
-            sortAlphabetically();
-        });
-        window.addEventListener('load', function () {
-            filterItemsByUsername();
+            filterByLeague();
             sortPrice();
+            // sortAlphabetically();
         });
+        // window.addEventListener('load', function () {
+        //     filterItemsByUsername();
+        //     sortPrice();
+        // });
         toggleBtn.addEventListener('click', function () {
             menuExpanded = !menuExpanded;
             if (menuExpanded) {
@@ -546,6 +551,32 @@ function filterItemsByUsername() {
         document.querySelector('#result-amount').innerText = "Showing " + count + " results"
     });
 }
+function filterByLeague() {
+    const desiredLeague = document.getElementById('leagueText').textContent;
+    const queryResults = document.querySelectorAll('.resultset .row');
+    count = 0;
+    queryResults.forEach(function (result) {
+        let resultLeague = result.getAttribute('result-league')
+        // console.log("Result: " + resultLeague + " Expected: " + desiredLeague);
+        if (resultLeague === desiredLeague) {
+            
+            // Display the item
+            if (result.style.display === 'flex') {
+                // console.log("Match found");
+                count += 1;
+            }
+            
+        }
+        else {
+            // console.log(result)
+            // result.style.setProperty('display', 'none');
+            result.style.display = 'none';
+            // console.log(result)
+        }
+    });
+    document.querySelector('#result-amount').innerText = "Showing " + count + " results"
+}
+
 function sortAlphabetically() {
     const queryResults = document.querySelectorAll('.resultset .row');
     const sortedResults = Array.from(queryResults).sort((a, b) => {
@@ -660,7 +691,7 @@ function addItemToPage(item) {
                         <span data-field="price" class="s sorted sorted-asc">
                             <span class="price-label fixed-price">Exact Price:</span><br>
                             <span>${item.price}</span><span>×</span>
-                            <span class="currency-text currency-image"><img src="static/images/orbs/orb_chaos.png" width="25px">
+                            <span class="currency-text currency-image"><img src="${'static/' + item.currency_image}" width="25px">
                                 <span>${item.currency}</span>
                             </span>
                         </span>
